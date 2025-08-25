@@ -30,7 +30,7 @@ This Repo contains projects that demonstrate my end-to-end data science knowledg
 - Clear code documentation and step-by-step usage instructions
 - Open to contributions and community feedback
 
-### Auto Data Quality Report Analysis
+## Auto Data Quality Report Analysis
 This project provides a basic set of tools for analyzing data quality issues within a dataset. I included functions for detecting missing data, outliers, duplicates, and consistency problems, and generated both a detailed text report and a visual dashboard.
 
 **The Features Include:**
@@ -64,7 +64,7 @@ The tool generates a text report summarizing the findings and a visual dashboard
 
 
 
-#### COVID-19 Data Explorer
+## COVID-19 Data Explorer
 **Project Description**
 This is a project I created to explore and visualize global COVID-19 data using Python, specifically leveraging the power of pandas for data manipulation, plotly for interactive visualizations, and streamlit to build an interactive web application. I downloaded the latest COVID-19 data from Our World in Data and performed cleaning, preparation, and various analytical tasks to understand trends, country comparisons, vaccination progress, and correlations with demographic factors.
 
@@ -120,7 +120,7 @@ Built with Streamlit and Plotly.
 
 
 
-###### E-commerce Customer Analysis and Predictive Modeling
+## E-commerce Customer Analysis and Predictive Modeling
 **Project Overview**
 This project I performed a comprehensive analysis of an e-commerce customer dataset i downloaded from kaggle to understand customer behavior, segment the customer base, build predictive models for churn and future purchase behavior, and provide actionable recommendations to the business.
 
@@ -244,7 +244,7 @@ Rationale: Improving churn prediction accuracy requires significant technical ef
 
 
 
-##### Personal Financial Analysis
+## Personal Financial Analysis
 This project provides a comprehensive analysis of personal bank transactions, offering insights into spending habits, income vs expenses, and overall financial health.
 
 #### Features
@@ -295,12 +295,12 @@ matplotlib
 seaborn
 These dependencies will be installed when you run the pip install command in the setup section.
 
-#### License
+### License
 MIT License
 
-#### Contributing
+### Contributing
 I welcome contributions from the community! Whether it's fixing a bug, improving documentation, or suggesting a new feature/idea, your input helps make this project better.
 
-#### Contact
+### Contact
 daniel.o.nwanjah@gmail.com
 +234 8066036369(whatsapp)
