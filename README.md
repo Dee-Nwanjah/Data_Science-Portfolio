@@ -217,3 +217,63 @@ If accurate churn prediction remains a high business priority, apply resampling 
 Experiment with different classification algorithms or implement class weights within the models that are better suited for handling imbalanced datasets.
 Explore and incorporate additional features that might be more predictive of churn, such as customer service interaction history, website browsing behavior, or engagement with marketing communications.
 Rationale: Improving churn prediction accuracy requires significant technical effort to address data issues and potentially explore new features/models. Addressing the data issue in future purchase prediction and focusing on immediate retention actions are higher priorities with more certain short-term impacts.
+
+
+Personal Financial Analysis
+This project provides a comprehensive analysis of personal bank transactions, offering insights into spending habits, income vs expenses, and overall financial health.
+
+Features
+Data Loading and Overview: Loads bank transaction data and provides a summary of total transactions, date range, and current balance.
+Spending Analysis: Visualizes spending distribution by category, monthly spending trends, top spending categories, and daily spending patterns.
+Income vs Expense Analysis: Compares monthly income and expenses, shows net savings/loss by month, tracks account balance over time, and calculates the monthly savings rate.
+Transaction Pattern Analysis: Identifies biggest expenses, analyzes spending by merchant, and detects unusual large transactions.
+Personalized Financial Report: Generates a detailed report summarizing key financial metrics, providing a financial health score, and offering personalized recommendations.
+Interactive Budget Tracker: Allows setting monthly budgets for different categories and compares them against actual spending.
+Setup
+Clone the repository (or download the notebook):
+
+    pip install pandas numpy matplotlib seaborn
+     
+Requirement already satisfied: pandas in /usr/local/lib/python3.12/dist-packages (2.2.2)
+Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (2.0.2)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (3.10.0)
+Requirement already satisfied: seaborn in /usr/local/lib/python3.12/dist-packages (0.13.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.12/dist-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.12/dist-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.12/dist-packages (from pandas) (2025.2)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (4.59.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (25.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (11.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (3.2.3)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Prepare your data:
+
+The notebook expects a CSV file named bank_transactions.csv in the same directory as the notebook.
+The CSV file should have the following columns: date, description, amount, category, and balance.
+The provided notebook includes code to generate sample data if you don't have your own.
+Run the notebook:
+
+Execute each code cell in the notebook sequentially.
+The notebook will output visualizations, summaries, and a personalized financial report.
+Customization
+Budgeting: You can modify the monthly_budgets dictionary in the create_budget_analysis function (in the "Interactive Budget Tracker" section) to set your own budget amounts for different categories.
+Categorization: The categorize_transaction function (in the "Analyze Spending by Category" section) uses keywords to categorize transactions. You can modify this function to improve categorization based on your specific transaction descriptions.
+Analysis Period: The analysis is based on the date range of the loaded data. Ensure your bank_transactions.csv file covers the period you want to analyze.
+Dependencies
+pandas
+numpy
+matplotlib
+seaborn
+These dependencies will be installed when you run the pip install command in the setup section.
+
+License
+[Specify your license here, e.g., MIT License]
+
+Contributing
+[Optional: Add guidelines for contributing to the project]
+
+Contact
+[Optional: Add your contact information]
