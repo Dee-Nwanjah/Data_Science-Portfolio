@@ -2,6 +2,34 @@
 This Repo contains projects that demonstrate my end-to-end data science knowledge and skills
 
 
+## Skills Demonstrated
+
+**Data Science & Analytics Skills**
+- Data cleaning and preprocessing (handling missing values, detecting outliers, checking for duplicates, ensuring consistency)
+- Exploratory Data Analysis (EDA) and KPI calculation
+- Customer segmentation (including RFM analysis)
+- Predictive modeling (classification and regression, model selection, training, and evaluation)
+- Feature engineering
+- Data visualization (matplotlib, seaborn, plotly, Streamlit dashboards)
+
+**Programming & Technical Skills**
+- Python programming (including libraries: pandas, numpy, matplotlib, seaborn, plotly, streamlit, requests, pyngrok)
+- Building and deploying interactive dashboards and web applications (Streamlit, ngrok)
+- Working with Google Colab notebooks
+- Automating reporting and saving outputs
+- Handling large datasets (data wrangling, performance optimization)
+
+**Business & Domain Knowledge**
+- E-commerce analytics (customer behavior analysis, product/category analysis, payment methods)
+- Financial analysis (income vs expenses, savings rate, budgeting, financial health scoring)
+- Actionable recommendations based on insights
+- Understanding of COVID-19 data and public health analytics
+
+**Collaboration & Documentation**
+- Writing detailed and actionable recommendations
+- Clear code documentation and step-by-step usage instructions
+- Open to contributions and community feedback
+
 Auto Data Quality Report Analysis
 This project provides a basic set of tools for analyzing data quality issues within a dataset. I included functions for detecting missing data, outliers, duplicates, and consistency problems, and generated both a detailed text report and a visual dashboard.
 
