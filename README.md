@@ -1,8 +1,9 @@
 # Data_Science-Portfolio
-This Repo contains 12 projects that demonstrate my end-to-end data science knowledge and skills
+This Repo contains projects that demonstrate my end-to-end data science knowledge and skills
 
-Data Quality Analysis and Reporting Tool
-This project provides a basic set of tools for analyzing data quality issues within a dataset. It includes functions for detecting missing data, outliers, duplicates, and consistency problems, and generates both a detailed text report and a visual dashboard.
+
+Auto Data Quality Report Analysis
+This project provides a basic set of tools for analyzing data quality issues within a dataset. I included functions for detecting missing data, outliers, duplicates, and consistency problems, and generated both a detailed text report and a visual dashboard.
 
 The Features Include:
 Missing Data Analysis: Identifies columns with missing values and reports their count and percentage.
@@ -32,6 +33,8 @@ A sample dataset (sample_sales_data.csv) was created and used in the notebook to
 
 Reports and Dashboard
 The tool generates a text report summarizing the findings and a visual dashboard to visualize the data quality issues. Examples of these outputs are included in the notebook.
+
+
 
 COVID-19 Data Explorer
 Project Description
@@ -65,17 +68,7 @@ Install Dependencies: I used the following libraries, which you can install usin
      
 Your Streamlit app is available at: https://fbfc47e3af13.ngrok-free.app
 
-
-     
-COVID-19 Data Explorer
-Project Description
-I created this project explore and visualize global COVID-19 data using Python, and also leveraging the power of pandas for data manipulation, plotly for interactive visualizations, and streamlit to build an interactive web application. I downloaded the latest COVID-19 data from Our World in Data and performed cleaning, preparation, and various analytical tasks to understand trends, country comparisons, vaccination progress, and correlations with demographic factors.
-
-Setup and Installation
-in other to run this project, you will need a Python environment with the necessary libraries installed. As far as i know, The easiest way to get started is by using Google Colaboratory (Colab), which provides a free, cloud-based Jupyter notebook environment.
-
 STEPS TO FOLLOW:
-
 Open the Colab Notebook: Access the Colab notebook associated with this project.
 Install Dependencies: In the Colab notebook, I used pip to install the required libraries:
 !pip install streamlit pandas numpy plotly requests pyngrok
@@ -96,6 +89,7 @@ This Colab Notebook: Provides the environment and steps I used to install depend
 Acknowledgments
 Data is from Our World in Data.
 Built with Streamlit and Plotly.
+
 
 
 E-commerce Customer Analysis and Predictive Modeling
@@ -219,6 +213,7 @@ Explore and incorporate additional features that might be more predictive of chu
 Rationale: Improving churn prediction accuracy requires significant technical effort to address data issues and potentially explore new features/models. Addressing the data issue in future purchase prediction and focusing on immediate retention actions are higher priorities with more certain short-term impacts.
 
 
+
 Personal Financial Analysis
 This project provides a comprehensive analysis of personal bank transactions, offering insights into spending habits, income vs expenses, and overall financial health.
 
@@ -270,10 +265,11 @@ seaborn
 These dependencies will be installed when you run the pip install command in the setup section.
 
 License
-[Specify your license here, e.g., MIT License]
+MIT License
 
 Contributing
-[Optional: Add guidelines for contributing to the project]
+I welcome contributions from the community! Whether it's fixing a bug, improving documentation, or suggesting a new feature/idea, your input helps make this project better.
 
 Contact
-[Optional: Add your contact information]
+daniel.o.nwanjah@gmail.com
++234 8066036369(whatsapp)
