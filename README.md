@@ -30,10 +30,10 @@ This Repo contains projects that demonstrate my end-to-end data science knowledg
 - Clear code documentation and step-by-step usage instructions
 - Open to contributions and community feedback
 
-Auto Data Quality Report Analysis
+### Auto Data Quality Report Analysis
 This project provides a basic set of tools for analyzing data quality issues within a dataset. I included functions for detecting missing data, outliers, duplicates, and consistency problems, and generated both a detailed text report and a visual dashboard.
 
-The Features Include:
+**The Features Include:**
 Missing Data Analysis: Identifies columns with missing values and reports their count and percentage.
 Outlier Detection: Detects outliers in numeric columns.
 Duplicate Check: Checks for duplicate records.
@@ -64,11 +64,11 @@ The tool generates a text report summarizing the findings and a visual dashboard
 
 
 
-COVID-19 Data Explorer
-Project Description
+#### COVID-19 Data Explorer
+**Project Description**
 This is a project I created to explore and visualize global COVID-19 data using Python, specifically leveraging the power of pandas for data manipulation, plotly for interactive visualizations, and streamlit to build an interactive web application. I downloaded the latest COVID-19 data from Our World in Data and performed cleaning, preparation, and various analytical tasks to understand trends, country comparisons, vaccination progress, and correlations with demographic factors.
 
-Setup and Installation
+##### Setup and Installation**
 To run this project, you will need a Python environment with the necessary libraries installed. The easiest way to get started is by using Google Colaboratory (Colab), which provides a free, cloud-based Jupyter notebook environment.
 
 Open the Colab Notebook: Access the Colab notebook associated with this project.
@@ -96,7 +96,7 @@ Install Dependencies: I used the following libraries, which you can install usin
      
 Your Streamlit app is available at: https://fbfc47e3af13.ngrok-free.app
 
-STEPS TO FOLLOW:
+#### STEPS TO FOLLOW:
 Open the Colab Notebook: Access the Colab notebook associated with this project.
 Install Dependencies: In the Colab notebook, I used pip to install the required libraries:
 !pip install streamlit pandas numpy plotly requests pyngrok
@@ -104,14 +104,14 @@ Set up ngrok: I used ngrok via the pyngrok library to create a public URL for th
 
 Run the Streamlit App: In the Colab notebook, I included a cell that runs the app.py script and uses pyngrok to create a public tunnel to the Streamlit app. Execute that cell. You should see output indicating that the ngrok tunnel has been established and providing a public URL.
 
-HOW TO Access the Web Application
+##### HOW TO Access the Web Application**
 Once the Streamlit app is running in the Colab notebook (after executing the cell mentioned in step 4 above), you can access the interactive dashboard using the public URL provided in the output of that cell.
 
 Streamlit App Public URL (via ngrok): [YOUR_NGROK_URL_HERE]
 
 You should note that This URL is temporary and will only be active while the Colab notebook is running and the cell with the ngrok setup is executing. Remember to replace [YOUR_NGROK_URL_HERE] with the actual URL you get from the Colab output.
 
-Project Structure
+**Project Structure**
 app.py: Contains the Python code for the Streamlit web application, including data loading, cleaning, analysis functions, and the Streamlit layout.
 This Colab Notebook: Provides the environment and steps I used to install dependencies, create the app.py file, and run the Streamlit application with ngrok.
 Acknowledgments
@@ -120,14 +120,14 @@ Built with Streamlit and Plotly.
 
 
 
-E-commerce Customer Analysis and Predictive Modeling
-Project Overview
+###### E-commerce Customer Analysis and Predictive Modeling
+**Project Overview**
 This project I performed a comprehensive analysis of an e-commerce customer dataset i downloaded from kaggle to understand customer behavior, segment the customer base, build predictive models for churn and future purchase behavior, and provide actionable recommendations to the business.
 
-Data
+**Data**
 The analysis uses the ecommerce_customer_data_large.csv dataset which is the dataset i got from kaggle.
 
-All the initial steps i took:
+##### All the initial steps i took:
 
 I Loaded the dataset into a pandas DataFrame.
 Checked the dataset shape and column names.
@@ -137,7 +137,7 @@ Checked the date range of the purchase data.
 Identified the number of unique customers and product categories.
 There were also some additional data wrangling included which are: converting the 'Purchase Date' column to datetime objects and extracting 'Year', 'Month', 'Day', and 'Weekday' for time-based analysis.
 
-Exploratory Data Analysis (EDA)
+##### Exploratory Data Analysis (EDA)
 I calculated a couple of Key performance indicators (KPIs) in other to get an overview of the business performance which are as follows:
 
 Total Revenue
@@ -146,7 +146,9 @@ Total Customers
 Average Order Value
 Total Products Sold
 Average Daily Customers
-I also created a comprehensive dashboard to visualize key aspects of the e-commerce sales data. The dashboard includes plots for includes:
+
+I also created a comprehensive dashboard to visualize key aspects of the e-commerce sales data.
+**The dashboard includes plots for includes:**
 
 Monthly Revenue Trend
 Top Products by Revenue
@@ -158,7 +160,7 @@ Customer Distribution by Age Group
 Customer Distribution by Gender
 These visualizations provide insights into sales patterns, popular categories and payment methods, and customer demographics.
 
-Customer Segmentation
+##### Customer Segmentation
 Customer segmentation was carried out using two approaches:
 
 Simple Segmentation: I segmented customers based on their total spent and order count into 'VIP', 'High Value', 'Frequent', and 'Regular' categories.
@@ -170,7 +172,7 @@ Calculated the average Recency, Frequency, and Monetary values for key segments 
 Predictive Modeling
 I built these Predictive models for two purposes:
 
-Customer Churn Prediction
+##### Customer Churn Prediction
 Data Preparation: I identified the target variable 'Churn'. I also selected some Relevant features and aggregated at the customer level, including demographic information, return behavior, and RFM metrics. Although Categorical features were so the models can easily understand.
 Feature Engineering: I engineered New features to potentially improve the model performance, including Average Order Value, Return Frequency, and interaction terms between RFM metrics and customer age.
 Model Selection: Random Forest Classifier and LightGBM Classifier were chosen as the initial models for binary classification.
@@ -178,7 +180,7 @@ Model Training: The data was split into training and testing sets (80/20 split),
 Model Evaluation: I evaluated the Model performance using metrics appropriate for imbalanced classification: Accuracy, Precision, Recall, F1-Score, and ROC-AUC score.
 Results for Churn Prediction: Both the Random Forest and the LightGBM models showed high accuracy but very low Precision, Recall, and F1-Score, and ROC-AUC scores close to 0.5. This indicates that while the models can predict the majority class (non-churn) well, they are not really effective at identifying the minority churn class, likely due to the imbalanced nature of the dataset.
 
-Future Purchase Prediction
+##### Future Purchase Prediction
 Data Preparation: The target variable was defined as the 'Total Purchase Amount' in the next quarter following the last purchase date in the dataset. These Features were prepared based on historical data before the prediction period, including historical purchase metrics and customer characteristics. Categorical features were one-hot encoded as well.
 Feature Engineering: Features such as Average Order Value and Most Frequent Product Category were engineered from historical data.
 Model Selection: Random Forest Regressor and LightGBM Regressor were chosen as initial models for regression.
@@ -186,11 +188,11 @@ Model Training: The data was aslo split into training and testing sets (80/20 sp
 Model Evaluation: Model performance was evaluated using regression metrics: Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R-squared (R2) score.
 Results for Future Purchase Prediction: Both the Random Forest and the LightGBM models showed perfect MAE, RMSE, and R2 scores (0, 0, and 1.0 respectively). This highly unusual result was traced back to the target variable ('FutureTotalPurchaseAmount') containing only zero values in the defined prediction period. This indicates a critical data issue or misaligned prediction period, rendering these initial models for future purchase prediction ineffective.
 
-Actionable Recommendations
+##### Actionable Recommendations
 Based on the insights gained from EDA, customer segmentation, and the predictive modeling attempts, the following actionable recommendations were provided, prioritized by potential impact and feasibility with Gemini's assistance:
 
-High Priority Recommendations
-Address the Future Purchase Prediction Target Variable Issue:
+**High Priority Recommendations**
+Addressing the Future Purchase Prediction Target Variable Issue:
 
 Problem/Opportunity: The target variable for future purchase prediction was zero for all customers, rendering the prediction models useless.
 Action(s):
@@ -242,10 +244,10 @@ Rationale: Improving churn prediction accuracy requires significant technical ef
 
 
 
-Personal Financial Analysis
+##### Personal Financial Analysis
 This project provides a comprehensive analysis of personal bank transactions, offering insights into spending habits, income vs expenses, and overall financial health.
 
-Features
+#### Features
 Data Loading and Overview: Loads bank transaction data and provides a summary of total transactions, date range, and current balance.
 Spending Analysis: Visualizes spending distribution by category, monthly spending trends, top spending categories, and daily spending patterns.
 Income vs Expense Analysis: Compares monthly income and expenses, shows net savings/loss by month, tracks account balance over time, and calculates the monthly savings rate.
@@ -253,7 +255,8 @@ Transaction Pattern Analysis: Identifies biggest expenses, analyzes spending by 
 Personalized Financial Report: Generates a detailed report summarizing key financial metrics, providing a financial health score, and offering personalized recommendations.
 Interactive Budget Tracker: Allows setting monthly budgets for different categories and compares them against actual spending.
 Setup
-Clone the repository (or download the notebook):
+
+**Clone the repository (or download the notebook):**
 
     pip install pandas numpy matplotlib seaborn
      
@@ -292,12 +295,12 @@ matplotlib
 seaborn
 These dependencies will be installed when you run the pip install command in the setup section.
 
-License
+#### License
 MIT License
 
-Contributing
+#### Contributing
 I welcome contributions from the community! Whether it's fixing a bug, improving documentation, or suggesting a new feature/idea, your input helps make this project better.
 
-Contact
+#### Contact
 daniel.o.nwanjah@gmail.com
 +234 8066036369(whatsapp)
