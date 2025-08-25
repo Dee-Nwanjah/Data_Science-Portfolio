@@ -96,3 +96,124 @@ This Colab Notebook: Provides the environment and steps I used to install depend
 Acknowledgments
 Data is from Our World in Data.
 Built with Streamlit and Plotly.
+
+
+E-commerce Customer Analysis and Predictive Modeling
+Project Overview
+This project I performed a comprehensive analysis of an e-commerce customer dataset i downloaded from kaggle to understand customer behavior, segment the customer base, build predictive models for churn and future purchase behavior, and provide actionable recommendations to the business.
+
+Data
+The analysis uses the ecommerce_customer_data_large.csv dataset which is the dataset i got from kaggle.
+
+All the initial steps i took:
+
+I Loaded the dataset into a pandas DataFrame.
+Checked the dataset shape and column names.
+Displayed the head of the DataFrame to preview the data.
+Examined data types.
+Checked the date range of the purchase data.
+Identified the number of unique customers and product categories.
+There were also some additional data wrangling included which are: converting the 'Purchase Date' column to datetime objects and extracting 'Year', 'Month', 'Day', and 'Weekday' for time-based analysis.
+
+Exploratory Data Analysis (EDA)
+I calculated a couple of Key performance indicators (KPIs) in other to get an overview of the business performance which are as follows:
+
+Total Revenue
+Total Transactions
+Total Customers
+Average Order Value
+Total Products Sold
+Average Daily Customers
+I also created a comprehensive dashboard to visualize key aspects of the e-commerce sales data. The dashboard includes plots for includes:
+
+Monthly Revenue Trend
+Top Products by Revenue
+Sales by Day of Week
+Transactions by Payment Method
+Order Value Distribution
+Monthly Active Customers
+Customer Distribution by Age Group
+Customer Distribution by Gender
+These visualizations provide insights into sales patterns, popular categories and payment methods, and customer demographics.
+
+Customer Segmentation
+Customer segmentation was carried out using two approaches:
+
+Simple Segmentation: I segmented customers based on their total spent and order count into 'VIP', 'High Value', 'Frequent', and 'Regular' categories.
+RFM Analysis: Recency, Frequency, and Monetary values were calculated for each customer. I then segmented Customers based on quantiles of these RFM metrics, resulting in RFM scores (e.g., 444 for high Recency, Frequency, and Monetary).
+Analysis of the RFM segments were included:
+
+Examinined the distribution of customers across different RFM scores.
+Calculated the average Recency, Frequency, and Monetary values for key segments to understand their characteristics (e.g., identifying high-value segments like 444 and low-value/inactive segments like 111).
+Predictive Modeling
+I built these Predictive models for two purposes:
+
+Customer Churn Prediction
+Data Preparation: I identified the target variable 'Churn'. I also selected some Relevant features and aggregated at the customer level, including demographic information, return behavior, and RFM metrics. Although Categorical features were so the models can easily understand.
+Feature Engineering: I engineered New features to potentially improve the model performance, including Average Order Value, Return Frequency, and interaction terms between RFM metrics and customer age.
+Model Selection: Random Forest Classifier and LightGBM Classifier were chosen as the initial models for binary classification.
+Model Training: The data was split into training and testing sets (80/20 split), and both models were trained on the training data.
+Model Evaluation: I evaluated the Model performance using metrics appropriate for imbalanced classification: Accuracy, Precision, Recall, F1-Score, and ROC-AUC score.
+Results for Churn Prediction: Both the Random Forest and the LightGBM models showed high accuracy but very low Precision, Recall, and F1-Score, and ROC-AUC scores close to 0.5. This indicates that while the models can predict the majority class (non-churn) well, they are not really effective at identifying the minority churn class, likely due to the imbalanced nature of the dataset.
+
+Future Purchase Prediction
+Data Preparation: The target variable was defined as the 'Total Purchase Amount' in the next quarter following the last purchase date in the dataset. These Features were prepared based on historical data before the prediction period, including historical purchase metrics and customer characteristics. Categorical features were one-hot encoded as well.
+Feature Engineering: Features such as Average Order Value and Most Frequent Product Category were engineered from historical data.
+Model Selection: Random Forest Regressor and LightGBM Regressor were chosen as initial models for regression.
+Model Training: The data was aslo split into training and testing sets (80/20 split), and both models were trained on the training data.
+Model Evaluation: Model performance was evaluated using regression metrics: Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R-squared (R2) score.
+Results for Future Purchase Prediction: Both the Random Forest and the LightGBM models showed perfect MAE, RMSE, and R2 scores (0, 0, and 1.0 respectively). This highly unusual result was traced back to the target variable ('FutureTotalPurchaseAmount') containing only zero values in the defined prediction period. This indicates a critical data issue or misaligned prediction period, rendering these initial models for future purchase prediction ineffective.
+
+Actionable Recommendations
+Based on the insights gained from EDA, customer segmentation, and the predictive modeling attempts, the following actionable recommendations were provided, prioritized by potential impact and feasibility with Gemini's assistance:
+
+High Priority Recommendations
+Address the Future Purchase Prediction Target Variable Issue:
+
+Problem/Opportunity: The target variable for future purchase prediction was zero for all customers, rendering the prediction models useless.
+Action(s):
+Verify the data source and extraction logic for the prediction period.
+If data capture is incomplete or the period is not representative, redefine the prediction target (e.g., probability of any purchase in a longer timeframe, or total purchase amount over a different, valid period).
+If predicting zero is the correct outcome for this specific period due to external factors, acknowledge this and shift focus to other predictive tasks or historical analysis.
+Rationale: This is a critical data integrity issue. Resolving it is foundational for accurate future revenue forecasting and customer lifetime value analysis.
+Focus on Customer Retention for At-Risk Segments:
+
+Problem/Opportunity: Churn prediction models were ineffective, but RFM analysis identified segments with low Recency and Frequency (e.g., RFM 111, 211) who are likely inactive or low-engagement and at risk of churning.
+Action(s):
+Implement targeted re-engagement campaigns for customers in RFM segments with low Recency (Recency score 1 or 2). Use personalized emails with discounts, 'We miss you' messages, and tailored product recommendations.
+Develop strategies to encourage repeat purchases for customers in RFM segments with low Frequency (Frequency score 1 or 2). Offer loyalty points for repeat buys, explore subscription options, or provide bundled offers.
+Conduct targeted surveys or direct outreach to customers in low-engagement segments to understand their reasons for inactivity and gather feedback.
+Rationale: Retaining existing customers is significantly more cost-effective than acquiring new ones. Proactive engagement with at-risk segments can directly prevent revenue loss.
+Maximize Value from High-Value (VIP) Customers:
+
+Problem/Opportunity: RFM analysis identified high-value segments (e.g., RFM 444, 344) who contribute the most to the business's revenue.
+Action(s):
+Implement a tiered loyalty program offering escalating benefits (e.g., increasing discounts, free/faster shipping, early access to sales/new products) for customers in higher RFM segments.
+Provide personalized communication and potentially a dedicated customer support channel for top-tier VIP customers.
+Organize exclusive events or offer premium products/services tailored to this group to enhance loyalty and encourage continued high spending.
+Rationale: Nurturing high-value customers strengthens their loyalty, increases their lifetime value, and can lead to positive referrals, significantly impacting overall revenue.
+Medium Priority Recommendations
+Optimize Marketing and Product Strategies:
+
+Problem/Opportunity: EDA revealed balanced popularity across key product categories. Customer segmentation provides insights into distinct customer preferences and behaviors.
+Action(s):
+Tailor marketing content (emails, ads, website banners) and personalized product recommendations based on customer segments and their most frequently purchased product categories.
+Analyze purchasing patterns within different RFM segments to identify which product categories are most popular with high-value vs. low-value customers and adjust inventory, promotions, and merchandising accordingly.
+Continue to ensure smooth operations and consistent effort across all payment methods and days of the week, as current analysis shows no major bottlenecks or significant variations in sales patterns.
+Rationale: Aligning marketing and product efforts with customer segments and observed preferences improves campaign effectiveness and potentially increases sales efficiency.
+Increase Average Order Value (AOV):
+
+Problem/Opportunity: The order value distribution is heavily skewed towards lower amounts, indicating potential to increase the value per transaction.
+Action(s):
+Implement a free shipping threshold set slightly above the current average order value to encourage customers to add more items to their cart.
+Utilize product bundling (e.g., frequently bought together items) and cross-selling/up-selling recommendations on product pages and during the checkout process.
+Consider offering small incentives (e.g., a minor discount, a free sample) for exceeding specific order value thresholds.
+Rationale: Increasing AOV directly boosts revenue without needing to increase the number of transactions. Strategies are generally feasible to implement.
+Low Priority Recommendations
+Refine Churn Prediction Approach (if needed):
+Problem/Opportunity: The current churn prediction models were ineffective due to significant data imbalance in the target variable.
+Action(s):
+If accurate churn prediction remains a high business priority, apply resampling techniques (e.g., SMOTE for oversampling the minority class, or Undersampling) during model training to address the class imbalance.
+Experiment with different classification algorithms or implement class weights within the models that are better suited for handling imbalanced datasets.
+Explore and incorporate additional features that might be more predictive of churn, such as customer service interaction history, website browsing behavior, or engagement with marketing communications.
+Rationale: Improving churn prediction accuracy requires significant technical effort to address data issues and potentially explore new features/models. Addressing the data issue in future purchase prediction and focusing on immediate retention actions are higher priorities with more certain short-term impacts.
