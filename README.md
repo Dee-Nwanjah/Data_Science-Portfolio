@@ -30,6 +30,17 @@ This Repo contains projects that demonstrate my end-to-end data science knowledg
 - Clear code documentation and step-by-step usage instructions
 - Open to contributions and community feedback
 
+**Data Engineering & ETL:**
+- Automated generation of realistic synthetic datasets using Faker and NumPy for customers, products, orders, interactions, and website sessions.
+- Construction of normalized relational schema with multiple interrelated tables (customers, products, orders, order_items, interactions, website_sessions).
+- Efficient batch loading of large datasets into a SQLite database using pandas and SQLAlchemy.
+
+**Database Design & SQL:**
+- Creation of a robust multi-table schema with appropriate data types, primary/foreign keys, and referential integrity.
+- Implementation of indexes for query performance optimization.
+- Use of advanced SQL features: window functions (ROW_NUMBER), CTEs, aggregation, conditional logic, and calculated fields.
+- Creation of materialized views for pre-aggregated analytics.
+
 ## Auto Data Quality Report Analysis
 This project provides a basic set of tools for analyzing data quality issues within a dataset. I included functions for detecting missing data, outliers, duplicates, and consistency problems, and generated both a detailed text report and a visual dashboard.
 
@@ -118,6 +129,76 @@ Acknowledgments
 Data is from Our World in Data.
 Built with Streamlit and Plotly.
 
+
+# Customer Analytics System with SQL
+
+A comprehensive, end-to-end customer analytics system built with Python and SQL, designed for retail and e-commerce analytics use cases. This project demonstrates how to generate synthetic customer data, design a relational database schema, load and index data, and perform advanced business intelligence analyses including RFM segmentation, cohort analysis, and revenue analytics.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Workflow](#project-workflow)
+- [Analytics Examples](#analytics-examples)
+- [How to Run](#how-to-run)
+
+---
+
+## Overview
+
+This system simulates a real-world customer analytics workflow:
+- Generates realistic data for customers, products, orders, interactions, and web sessions.
+- Loads data into a normalized SQLite database with optimized indexing.
+- Creates materialized views for fast analytics.
+- Implements customer segmentation (RFM), cohort analysis, and revenue analytics using SQL and Python.
+
+## Features
+
+- **Automated Data Generation:** Uses Faker and NumPy to create synthetic datasets (customers, products, orders, etc.).
+- **Robust Database Design:** Multi-table schema with primary/foreign keys and referential integrity.
+- **Performance Optimization:** Indexing and materialized views for efficient queries.
+- **Advanced Analytics:**
+  - RFM (Recency, Frequency, Monetary) segmentation
+  - Cohort analysis for retention
+  - Monthly revenue trends, growth, and order value metrics
+- **Python & SQL Integration:** All ETL and analytics steps are scripted and automated in a Jupyter notebook.
+
+## Technologies Used
+
+- Python (Pandas, NumPy, Matplotlib, Seaborn, Plotly)
+- SQLite & SQLAlchemy
+- Faker (synthetic data generation)
+- Jupyter Notebook
+
+## Project Workflow
+
+1. **Setup & Imports:** Installs required packages and configures the environment.
+2. **Database Schema:** Creates normalized tables for customers, products, orders, order items, interactions, and sessions.
+3. **Data Generation:** Synthetic data generation for all tables (customers, products, orders, etc.).
+4. **Data Loading:** Loads generated data into SQLite using Pandas and SQLAlchemy.
+5. **Indexing:** Adds indexes for query performance.
+6. **Materialized Views:** Creates summary tables/views for customer and product analytics.
+7. **Analytics:** Performs RFM segmentation, cohort analysis, and revenue analysis using SQL queries and Python.
+
+## Analytics Examples
+
+- **Customer Segmentation:** Champions, Loyal Customers, At Risk, Lost Customers, Big Spenders, etc.
+- **Cohort Analysis:** Customer retention by registration month.
+- **Revenue Analysis:** Monthly revenue, growth rates, average and median order value, acquisition metrics.
+
+## How to Run
+
+1. Clone the repo:
+    ```sh
+    git clone https://github.com/Dee-Nwanjah/Data_Science-Portfolio.git
+    ```
+2. Open the notebook:
+    ```
+    Customer_Analytics_System_with_SQL.ipynb
+    ```
+3. Run all cells in order. All dependencies are auto-installed if not present.
+4. Review outputs in the notebook for data summaries and analytics.
 
 
 ## E-commerce Customer Analysis and Predictive Modeling
